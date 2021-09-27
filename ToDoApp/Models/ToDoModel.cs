@@ -13,8 +13,10 @@ namespace ToDoApp.Models
         private string _toDoText;
         private bool _isDone;
 
+        [JsonProperty(PropertyName = "creationDate")]
         public DateTime CreationDate { get; set; } = DateTime.Now;
 
+        [JsonProperty(PropertyName = "toDoText")]
         public string ToDoText
         {
             get { return _toDoText; }
@@ -27,6 +29,7 @@ namespace ToDoApp.Models
             }
         }
 
+        [JsonProperty(PropertyName = "isDone")]
         public bool IsDone
         {
             get { return _isDone; }
